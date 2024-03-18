@@ -32,11 +32,15 @@ main{
 }
 
 .track{
+    justify-content: space-between;
+    align-items: center;
+
+    display: flex;
     background-color: white;
     border:2px solid gray;
-    width: 80%;
+    width: 60%;
     margin:10px;
-    padding: 5px;
+    padding: 10px;
     transition: all linear 0.1s;
 }
 
@@ -49,6 +53,9 @@ main{
     box-shadow: 10px 10px 10px;
 }
 
+.track_download{
+    text-align: right;
+}
 .track_download a{
     color: rgb(117, 117, 117);
 }
