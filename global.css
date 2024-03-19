@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&family=Pixelify+Sans&family=Raleway&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-size: 100%;
+    font-family: "Candal", sans-serif;
 }
 header{
     width: 100%;
@@ -24,24 +27,30 @@ main{
     background-color: rgb(196, 196, 196);
 }
 
-.container{
+#container{
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
+    padding-block:20px ;
 }
 
 .track{
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
+    position: relative;
 
-    display: flex;
+
     background-color: white;
     border:2px solid gray;
     width: 60%;
+    min-width: 400px;
     margin:10px;
     padding: 10px;
     transition: all linear 0.1s;
+}
+.track:hover{
+    box-shadow: 10px 10px 10px;
 }
 
 .track_title{
@@ -49,19 +58,47 @@ main{
     font-weight: bold;
 }
 
-.track:hover{
-    box-shadow: 10px 10px 10px;
-}
-
 .track_download{
-    text-align: right;
+    position: absolute;
+    bottom: 22px;
+    right: 10px;
 }
 .track_download a{
-    color: rgb(117, 117, 117);
+    background-color: black;
+    padding: 10px 10px 12px 10px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.track_download a:hover{
+    color: rgb(0, 207, 0);
 }
 .track_download a:visited{
-    color: black;
+    color: rgb(84, 84, 84);
 }
+
+.track_desc{
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px;
+
+    align-items: center;
+}
+
+
+.track_image img{
+    height:100px;
+    background-position: center;
+    background-size: cover;
+    min-width: 50px;
+    margin-right: 20px;
+    aspect-ratio: 1;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
 
 
 
