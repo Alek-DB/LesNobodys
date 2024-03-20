@@ -21,4 +21,12 @@ class Track{
     get_code(){
         return this.html
     }
+
+    get_title(){
+        return this.title
+    }
+
+    is_downloadable(){
+        return this.link != ""
+    }
 }

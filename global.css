@@ -9,23 +9,25 @@
 }
 header{
     width: 100%;
-    height:20vh;
+    height:10vh;
     background-color: rgb(22, 22, 22);
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content:space-around;
     border-bottom: 2px solid black;
 }
-
+.sort{
+    font-size: 1em;
+    color: rgb(57, 57, 57);
+    padding: 5px;
+    
+}
 #title{
     font-size: 2em;
     color: white;
 }
 
-
-main{
-    background-color: rgb(196, 196, 196);
-}
 
 #container{
     display: flex;
@@ -33,6 +35,7 @@ main{
     width: 100%;
     align-items: center;
     padding-block:20px ;
+    background-color: rgb(196, 196, 196);
 }
 
 .track{
@@ -40,14 +43,15 @@ main{
     align-items: end;
     position: relative;
 
-
     background-color: white;
     border:2px solid gray;
-    width: 60%;
+    width: 50%;
     min-width: 400px;
     margin:10px;
-    padding: 10px;
+    padding: 20px;
     transition: all linear 0.1s;
+
+    border-radius: 10px;
 }
 .track:hover{
     box-shadow: 10px 10px 10px;
@@ -117,6 +121,12 @@ footer{
     align-items: center;
 }
 
+footer a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+}
+
 .instagram_text{
     position: relative;
     font-size: 1.8em;
@@ -136,4 +146,27 @@ footer{
 .instagram_text:hover:after{
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+@media screen and (max-width: 800px) {
+
+    .track{
+        width: 70%;
+        min-width: 350px;
+        padding-left: 10px;
+    }
+
+
+    .track_image img{
+        height:70px;
+    }
+
+    .track_desc{
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .track_download{
+        top:20px;
+    }
 }
