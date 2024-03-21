@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
     create_track("White Wedding", "", "images/white_wedding.png")
     create_track("You're wondering Now", "", "images/wondering_now.png")
     create_track("Caress Me Down ", "aaa", "images/santeria.png")
-    create_track("Hymne à la bière ", "", "images/aucun_Cadre.png")
+    create_track("Hymne à la bière ", "", "images/aucun_cadre.png")
     create_track("Psycho Killer", "a", "images/psycho_killer.png")
     create_track("I Will Survive", "", "images/survive.png")
     // create_track("", "", "images/")
