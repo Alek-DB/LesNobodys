@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Candal&family=Pixelify+Sans&family=Raleway&display=swap');
 
+@font-face {
+    font-family: myFirstFont;
+    src: url("font/LEMONMILK-Medium.otf");
+  }
+  
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 100%;
-    font-family: "Candal", sans-serif;
+    font-size: 15px;
+    font-family: myFirstFont, sans-serif;
 }
 
 header{
@@ -28,6 +34,8 @@ header{
     transition: all linear 0.2s;
 }
 
+
+
 .sort_area{
     text-align: center;
 }
@@ -47,17 +55,36 @@ header{
     padding-top:20px;
 }
 
+.music{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+    
+}
 
 #container{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 60%;
     align-items: center;
     padding-block:20px ;
     background: rgb(64,149,184);
     background: linear-gradient( rgba(64,149,184,1) 0%, rgba(151,191,254,1) 100%);
 
 }
+
+
+#bg{
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100px;
+    height: 100px;
+    background-image: url("images/sous-sol_cover.png");
+    background-size: contain;
+    top:0
+}
+
 
 .track{
     justify-content: space-between;
@@ -66,7 +93,7 @@ header{
 
     background-color: white;
     border:2px solid rgb(35, 35, 35);
-    width: 50%;
+    width: 80%;
     min-width: 400px;
     margin:10px;
     padding: 20px;
