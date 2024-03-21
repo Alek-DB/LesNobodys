@@ -19,13 +19,23 @@ header{
     height:10vh;
     min-height: 150px;
     background-color: rgb(52, 52, 52);
+
+    
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-around;
+    justify-content:center;
     border-bottom: 2px solid black;
 
 }
+
+.music{
+    display: flex;
+    position: relative;
+
+    background-color: rgb(58, 165, 192);
+}
+
 .sort{
     font-size: 1em;
     color: rgb(0, 0, 0);
@@ -34,11 +44,39 @@ header{
     transition: all linear 0.2s;
 }
 
-
-
-.sort_area{
+#sort_area, #sort_left{
     text-align: center;
 }
+
+#container_left{
+    margin-top: 100px;
+    position: sticky;
+    top:100px;
+    height: 500px;
+    width: 25%;
+    max-width: 300px;
+
+    text-align: center;
+}
+#spotify_info{
+    text-align: center;
+    margin: 10px;
+    margin-top: 50px;
+}
+#spotify, #spotify_en{
+    margin: 10px;
+    height:150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#spotify{
+    background-image: url(images/spotify.png);
+}
+#spotify_en{
+    background-image: url(images/spotify_en.png);
+}
+
+
 #sort_btn{
     display: block;
     border-bottom: 2px solid black;
@@ -55,34 +93,16 @@ header{
     padding-top:20px;
 }
 
-.music{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    
-    
-}
+
 
 #container{
     display: flex;
-    flex-direction: column;
-    width: 60%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75%;
     align-items: center;
+    justify-content: center;
     padding-block:20px ;
-    background: rgb(64,149,184);
-    background: linear-gradient( rgba(64,149,184,1) 0%, rgba(151,191,254,1) 100%);
-
-}
-
-
-#bg{
-    position: -webkit-sticky;
-    position: sticky;
-    width: 100px;
-    height: 100px;
-    background-image: url("images/sous-sol_cover.png");
-    background-size: contain;
-    top:0
 }
 
 
@@ -91,12 +111,11 @@ header{
     align-items: end;
     position: relative;
 
-    background-color: white;
+    background-color: #b8d9ff;
     border:2px solid rgb(35, 35, 35);
-    width: 80%;
-    min-width: 400px;
-    margin:10px;
-    padding: 20px;
+    width: 20%;
+    min-width: 200px;
+    margin:30px;
     transition: all linear 0.1s;
 
     border-radius: 10px;
@@ -105,10 +124,31 @@ header{
     box-shadow: 10px 10px 10px;
 }
 
+.track_desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 50px;
+    text-align: center
+
+}
 .track_title{
     font-size: 1.2em;
     font-weight: bold;
+    margin-bottom: 5px;
 }
+.track_image img{
+    height:150px;
+    background-position: center;
+    background-size: cover;
+    min-width: 50px;
+    aspect-ratio: 1;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
 
 .track_download{
     position: absolute;
@@ -129,28 +169,6 @@ header{
 .track_download a:visited{
     color: rgb(84, 84, 84);
 }
-
-.track_desc{
-    display: flex;
-    flex-direction: row;
-
-    padding: 10px;
-
-    align-items: center;
-}
-
-
-.track_image img{
-    height:100px;
-    background-position: center;
-    background-size: cover;
-    min-width: 50px;
-    margin-right: 20px;
-    aspect-ratio: 1;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-
 
 
 
@@ -195,33 +213,55 @@ footer a{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-
-@media screen and (max-width: 800px) {
-
-    .track{
-        width: 70%;
-        min-width: 350px;
-        padding-left: 10px;
-    }
-
-    .track_image img{
-        height:70px;
-    }
-
-    .track_desc{
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .track_download{
-        top:20px;
-    }
-
+@media screen and (max-width: 1000px) {
     .sort{
         font-size: 0.8em;
     }
+    #container_left{
+        width: 30%;
+    }
+    #container{
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    header{
+        justify-content:space-around;
+    }
+
+    #container{
+        width: 100%;
+    }
+    .track{
+        width: 30%;
+        min-width: 200px;
+    }
+
+    .track_image img{
+        height:150px;
+    }
+
+
+
+    .sort{
+        font-size: 0.7em;
+    }
     #title img{
-        width:200px;
+        width:170px;
+    }
+
+
+    #container_left{
+        width: 0%;
+        display: none;
     }
 }
 
+@media screen and (max-width: 700px) {
+    .track{
+        width: 60%;
+    }
+}
