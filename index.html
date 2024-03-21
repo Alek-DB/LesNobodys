@@ -12,15 +12,17 @@
 <body>
     <header>
             <p id="title">
-                Les Nobody's
+                <img src="images/nobodys_logo.png" alt="">
             </p>
-            <div>
-                <button class="sort" id="low" onclick="show_lowest()">
-                    Sort A-Z
-                </button>
-                <button class="sort" id="big" onclick="show_biggest()">
-                    Sort Z-A
-                </button>
+            <div class="sort_area">
+                <div id="sort_btn">
+                    <button class="sort" id="low" onclick="show_lowest()">
+                        Sort A-Z
+                    </button>
+                    <button class="sort" id="big" onclick="show_biggest()">
+                        Sort Z-A
+                    </button>
+                </div>
                 <button class="sort" id="download" onclick="show_download()">
                     Downloadable
                 </button>
@@ -28,6 +30,8 @@
     </header>
     <main>
         <div class="music">
+
+            
             <div id="container">
 
                 <div class="track">

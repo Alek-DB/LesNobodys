@@ -7,25 +7,44 @@
     font-size: 100%;
     font-family: "Candal", sans-serif;
 }
+
 header{
     width: 100%;
     height:10vh;
-    background-color: rgb(22, 22, 22);
+    min-height: 150px;
+    background-color: rgb(52, 52, 52);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content:space-around;
     border-bottom: 2px solid black;
+
 }
 .sort{
     font-size: 1em;
-    color: rgb(57, 57, 57);
+    color: rgb(0, 0, 0);
     padding: 5px;
-    
+    border-radius: 5px;
+    transition: all linear 0.2s;
+}
+
+.sort_area{
+    text-align: center;
+}
+#sort_btn{
+    display: block;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    margin-inline: 20px;
+    margin-bottom: 20px;
 }
 #title{
     font-size: 2em;
     color: white;
+}
+#title img{
+    width:350px;
+    padding-top:20px;
 }
 
 
@@ -35,7 +54,9 @@ header{
     width: 100%;
     align-items: center;
     padding-block:20px ;
-    background-color: rgb(196, 196, 196);
+    background: rgb(64,149,184);
+    background: linear-gradient( rgba(64,149,184,1) 0%, rgba(151,191,254,1) 100%);
+
 }
 
 .track{
@@ -44,7 +65,7 @@ header{
     position: relative;
 
     background-color: white;
-    border:2px solid gray;
+    border:2px solid rgb(35, 35, 35);
     width: 50%;
     min-width: 400px;
     margin:10px;
@@ -76,7 +97,7 @@ header{
     transition: all 0.2s;
 }
 .track_download a:hover{
-    color: rgb(0, 207, 0);
+    color: rgb(51, 160, 206);
 }
 .track_download a:visited{
     color: rgb(84, 84, 84);
@@ -112,7 +133,7 @@ footer{
     display: flex;
 
     width: 100%;
-    background-color: rgb(22, 22, 22);
+    background-color: rgb(52, 52, 52);
     border-top: 2px solid black;
     height: 100px;
     color: white;
@@ -156,7 +177,6 @@ footer a{
         padding-left: 10px;
     }
 
-
     .track_image img{
         height:70px;
     }
@@ -169,4 +189,12 @@ footer a{
     .track_download{
         top:20px;
     }
+
+    .sort{
+        font-size: 0.8em;
+    }
+    #title img{
+        width:200px;
+    }
 }
+

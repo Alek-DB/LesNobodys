@@ -18,15 +18,18 @@ let sort_low_btn
 let sort_big_btn
 let sort_download_btn
 
+let select = "rgb(109, 148, 164)"
+let not_select = "rgb(181, 180, 177)"
+
 window.addEventListener('load', () => {
     mainNode = document.querySelector("#container")
     sort_low_btn = document.querySelector("#low")
     sort_big_btn = document.querySelector("#big")
     sort_download_btn = document.querySelector("#download")
 
-    sort_download_btn.style.backgroundColor = "red"
-    sort_big_btn.style.backgroundColor = "red"
-    sort_low_btn.style.backgroundColor = "red"
+    sort_download_btn.style.backgroundColor = not_select
+    sort_big_btn.style.backgroundColor = not_select
+    sort_low_btn.style.backgroundColor = not_select
 
     
 
@@ -77,67 +80,51 @@ const create_track = (track_title, track_link ,track_image) => {
 
 
 const show_lowest = () => {
-    sort_big_btn.style.backgroundColor = "red"
+    sort_big_btn.style.backgroundColor = not_select
     is_sorted_Z_A = false
 
-    if(!is_sorted_downloadable)
-        if(is_sorted_A_Z){
-            is_sorted_A_Z = false
-            sort_low_btn.style.backgroundColor = "red"
+    if(is_sorted_A_Z){
+        is_sorted_A_Z = false
+        sort_low_btn.style.backgroundColor = not_select
+        if(!is_sorted_downloadable)
             show(track_vector)
-        }
-        else{
-            is_sorted_A_Z = true
-            sort_low_btn.style.backgroundColor = "green"
-            show(sort_lowest)
-        }
-    else{
-        if(is_sorted_A_Z){
-            is_sorted_A_Z = false
-            sort_low_btn.style.backgroundColor = "red"
-        }
-        else{
-            is_sorted_A_Z = true
-            sort_low_btn.style.backgroundColor = "green"
-            show(sort_download, sort_not_download)
-        }
     }
-
+    else{
+        is_sorted_A_Z = true
+        sort_low_btn.style.backgroundColor = select
+        if(is_sorted_downloadable)
+            show(sort_download, sort_not_download)
+        else
+            show(sort_lowest)
+    }
 }
+
+
 const show_biggest = () => {
-    sort_low_btn.style.backgroundColor = "red"
+    sort_low_btn.style.backgroundColor = not_select
     is_sorted_A_Z = false
 
-    if(!is_sorted_downloadable)
-        if(is_sorted_Z_A){
-            is_sorted_Z_A = false
-            sort_big_btn.style.backgroundColor = "red"
+    if(is_sorted_Z_A){
+        is_sorted_Z_A = false
+        sort_big_btn.style.backgroundColor = not_select
+        if(!is_sorted_downloadable)
             show(track_vector)
-        }
-        else{
-            is_sorted_Z_A = true
-            sort_big_btn.style.backgroundColor = "green"
-            show(sort_biggest)
-        }
-    else{   
-        if(is_sorted_Z_A){
-            is_sorted_Z_A = false
-            sort_big_btn.style.backgroundColor = "red"
-        }
-        else{
-            is_sorted_Z_A = true
-            sort_big_btn.style.backgroundColor = "green"
-            show(sort_reverse_download, sort_reverse_not_download)
-        }
     }
-
+    else{
+        is_sorted_Z_A = true
+        sort_big_btn.style.backgroundColor = select
+        if(is_sorted_downloadable)
+            show(sort_reverse_download, sort_reverse_not_download)
+        else
+            show(sort_biggest)
+    }
 }
 
 
 const show_download = () => {
     if(is_sorted_downloadable){
         is_sorted_downloadable = false
-        sort_download_btn.style.backgroundColor = "red"
+        sort_download_btn.style.backgroundColor = not_select
         if(is_sorted_A_Z)
             show(sort_lowest)
         else if (is_sorted_Z_A)
@@ -147,7 +134,7 @@ const show_download = () => {
     }
     else{
         is_sorted_downloadable = true
-        sort_download_btn.style.backgroundColor = "green"
+        sort_download_btn.style.backgroundColor = select
         if(is_sorted_Z_A)
             show(sort_reverse_download, sort_reverse_not_download)
         else
@@ -178,6 +165,7 @@ const sort = () => {
         sort_biggest.push(temp_vector[id])
         temp_vector.splice(id,1)
     }
+
 
     sort_lowest = sort_biggest.map((x) => x)
     sort_lowest.reverse()
