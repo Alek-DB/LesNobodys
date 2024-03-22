@@ -49,31 +49,43 @@ header{
 }
 
 #container_left{
-    margin-top: 100px;
+    margin-top: 50px;
     position: sticky;
     top:100px;
-    height: 500px;
+    height: min-content;
     width: 25%;
     max-width: 300px;
 
     text-align: center;
 }
-#spotify_info{
-    text-align: center;
+#spotify_title{
     margin: 10px;
     margin-top: 50px;
+    font-size: 2em;
+}
+#spotify_info{
+    text-align: center;
 }
 #spotify, #spotify_en{
     margin: 10px;
     height:150px;
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
+
 }
 #spotify{
     background-image: url(images/spotify.png);
 }
 #spotify_en{
     background-image: url(images/spotify_en.png);
+}
+
+#apple{
+    margin-top: 50px;
+}
+#apple a{
+    font-size: 2em;
 }
 
 
@@ -263,5 +275,21 @@ footer a{
 @media screen and (max-width: 700px) {
     .track{
         width: 60%;
+    }
+}
+
+
+@media screen and (max-height: 700px) {
+    #apple{
+        margin-top: 20px;
+    }
+
+    #spotify_title{
+        margin-top: 20px;
+    }
+
+    #container_left{
+        margin-top: 20px;
+        top:10px;
     }
 }
