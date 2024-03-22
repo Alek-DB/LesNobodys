@@ -22,8 +22,8 @@ let sort_low_btn
 let sort_big_btn
 let sort_download_btn
 
-let select = "rgb(109, 148, 164)"
-let not_select = "rgb(181, 180, 177)"
+let select = "var(--select_color)"
+let not_select = "var(--not_select_color)"
 
 
 window.addEventListener('load', () => {
@@ -87,6 +87,8 @@ const check_width = () => {
         header_area.innerHTML = ""
         left_area.innerHTML = temp
 
+        header_area.style.display = "none"
+        left_area.style.display = "block"
 
         sort_in_header = false
         sort_low_btn = document.querySelector("#low")
@@ -98,6 +100,8 @@ const check_width = () => {
         left_area.innerHTML = ""
         header_area.innerHTML = temp
 
+        header_area.style.display = "block"
+        left_area.style.display = "none"
 
         sort_in_header = true
         sort_low_btn = document.querySelector("#low")
@@ -118,6 +122,9 @@ const create_track = (track_title, track_link ,track_image, track_owner, track_l
 
 
 const show_lowest = () => {
+
+    document.querySelector('header').scrollIntoView()
+
     sort_big_btn.style.backgroundColor = not_select
     is_sorted_Z_A = false
 
@@ -139,6 +146,9 @@ const show_lowest = () => {
 
 
 const show_biggest = () => {
+
+    document.querySelector('header').scrollIntoView()
+
     sort_low_btn.style.backgroundColor = not_select
     is_sorted_A_Z = false
 
@@ -160,6 +170,9 @@ const show_biggest = () => {
 
 
 const show_download = () => {
+
+    document.querySelector('header').scrollIntoView()
+
     if(is_sorted_downloadable){
         is_sorted_downloadable = false
         sort_download_btn.style.backgroundColor = not_select

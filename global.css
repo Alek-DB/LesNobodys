@@ -3,8 +3,16 @@
 @font-face {
     font-family: myFirstFont;
     src: url("font/LEMONMILK-Medium.otf");
-  }
-  
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root{
+    --select_color:rgb(146, 211, 225);
+    --not_select_color:rgb(144, 144, 144);
+}
 
 *{
     padding: 0;
@@ -20,20 +28,20 @@ header{
     min-height: 150px;
     background-color: rgb(52, 52, 52);
 
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content:center;
     border-bottom: 2px solid black;
-
 }
 
 .music{
     display: flex;
     position: relative;
-
+    align-items: start;
     background-color: rgb(58, 165, 192);
+    justify-content: space-between;
 }
 
 .sort{
@@ -41,22 +49,28 @@ header{
     color: rgb(0, 0, 0);
     padding: 5px;
     border-radius: 5px;
-    transition: all linear 0.2s;
+    transition: all linear 0.1s;
+}
+.sort:hover{
+    transform:scale(105%);
 }
 
 #sort_area, #sort_left{
     text-align: center;
+    max-width: 300px;
+    margin: auto;
+ 
 }
 
 #container_left{
-    margin-top: 50px;
     position: sticky;
     top:100px;
     height: min-content;
-    width: 25%;
-    max-width: 300px;
+    width: 22%;
 
     text-align: center;
+    margin: 10px;
+    margin-top: 30px;
 }
 #spotify_title{
     margin: 10px;
@@ -65,13 +79,18 @@ header{
 }
 #spotify_info{
     text-align: center;
+    padding: 5px;
 }
 #spotify, #spotify_en{
     margin: 10px;
     height:150px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    max-width: 300px;
+    margin-inline: auto;
+
+    border-radius: 10px;
 
 }
 #spotify{
@@ -82,7 +101,7 @@ header{
 }
 
 #apple{
-    margin-top: 50px;
+    margin-block: 50px;
 }
 #apple a{
     font-size: 2em;
@@ -96,10 +115,6 @@ header{
     margin-inline: 20px;
     margin-bottom: 20px;
 }
-#title{
-    font-size: 2em;
-    color: white;
-}
 #title img{
     width:350px;
     padding-top:20px;
@@ -107,11 +122,20 @@ header{
 
 
 
+#titre_container_right{
+    text-align: center;
+    font-size: 2em;
+    margin-top: 30px;
+}
+#container_right{
+    width: 80%;
+    border-left:2px solid rgb(0, 0, 0);
+}
+
 #container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 75%;
     align-items: center;
     justify-content: center;
     padding-block:20px ;
@@ -225,15 +249,30 @@ footer a{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-@media screen and (max-width: 1000px) {
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1150px) {
     .sort{
         font-size: 0.8em;
     }
     #container_left{
         width: 30%;
     }
-    #container{
+    #container_right{
         width: 70%;
+    }
+
+    #titre_container_right{
+        font-size: 1.4em;
     }
 
 }
@@ -243,9 +282,13 @@ footer a{
     header{
         justify-content:space-around;
     }
+    #sort_area{
+        margin: 10px;
+    }
 
-    #container{
+    #container_right{
         width: 100%;
+        border: none;
     }
     .track{
         width: 30%;
@@ -262,19 +305,35 @@ footer a{
         font-size: 0.7em;
     }
     #title img{
-        width:170px;
+        width:300px;
     }
 
+
+    .music{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 
     #container_left{
-        width: 0%;
-        display: none;
+        position: relative;
+        top:0px;
+        margin-top:0px;
+        width: 80%;
     }
+
+
+
 }
 
 @media screen and (max-width: 700px) {
     .track{
         width: 60%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #title img{
+        width:180px;
     }
 }
 
@@ -297,3 +356,4 @@ footer a{
         top:10px;
     }
 }
+

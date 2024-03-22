@@ -4,7 +4,6 @@ class Track{
         this.title = track_title
         this.link = track_link
         this.image = track_image
-        console.log(track_owner)
         this.length = track_length
         this.owner = track_owner
         this.html = ""
