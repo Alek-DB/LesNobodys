@@ -12,7 +12,7 @@ class Track{
 
     create_code(){
 
-        this.asLink = "<a href=\"" + this.link + " \" download=\"" + this.track_title + ".mp3" +"\" >Download</a></div></div>"
+        this.asLink = "<a href=\"" + this.link + " \" download=\"" + this.title + ".mp3" +"\" >Download</a></div></div>"
         this.noLink = "<div style=\"text-decoration: underline;\"> Comming soon </div>"
 
         this.html += "<div class=\"track\"> <div class=\"track_desc\"><div class=\"track_image\"><img src=\"" + this.image + "\" alt=\"\"></div>"
