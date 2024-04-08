@@ -46,7 +46,7 @@ window.addEventListener('load', () => {
     create_track("Blues en La", "", "images/sous-sol_cover.png", "Les Nobody's", "0:00")
     create_track("King Ska-Fa", "", "images/king-ska-fa.png", "Bad Manners", "0:00")
     create_track("Black Magic Woman", "", "images/black_magic_woman.png", "Santana", "0:00")
-    create_track("Ville", "Ville.mp3", "images/ville.png", "Les Goules", "0:00")
+    create_track("Ville", "songs/Ville.mp3", "images/ville.png", "Les Goules", "0:00")
     create_track("I'm a Believer", "", "images/believer.png", "The Monkees", "0:00")
     create_track("The Breakup Song", "", "images/breakup_song.png", "The Greg Kinh Band", "0:00")
     create_track("Colt 45", "", "images/colt_45.png", "Afroman", "0:00")
