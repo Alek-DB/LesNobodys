@@ -42,13 +42,13 @@ window.addEventListener('load', () => {
 
     //create track here
 
-    create_track("Marauder", "aaaaa", "images/sous-sol_cover.png", "Les Nobody's", "0:00")
-    create_track("Blues en La", "aaaaa", "images/sous-sol_cover.png", "Les Nobody's", "0:00")
-    create_track("King Ska-Fa", "aaaaa", "images/king-ska-fa.png", "Bad Manners", "0:00")
-    create_track("Black Magic Woman", "aaaa", "images/black_magic_woman.png", "Santana", "0:00")
-    create_track("Ville", "", "images/ville.png", "Les Goules", "0:00")
+    create_track("Marauder", "", "images/sous-sol_cover.png", "Les Nobody's", "0:00")
+    create_track("Blues en La", "", "images/sous-sol_cover.png", "Les Nobody's", "0:00")
+    create_track("King Ska-Fa", "", "images/king-ska-fa.png", "Bad Manners", "0:00")
+    create_track("Black Magic Woman", "", "images/black_magic_woman.png", "Santana", "0:00")
+    create_track("Ville", "Ville.mp3", "images/ville.png", "Les Goules", "0:00")
     create_track("I'm a Believer", "", "images/believer.png", "The Monkees", "0:00")
-    create_track("The Breakup Song", "aaaa", "images/breakup_song.png", "The Greg Kinh Band", "0:00")
+    create_track("The Breakup Song", "", "images/breakup_song.png", "The Greg Kinh Band", "0:00")
     create_track("Colt 45", "", "images/colt_45.png", "Afroman", "0:00")
     create_track("Diamond Mine", "", "images/diamond_mine.png", "Blue Rodeo", "0:00")
     create_track("Friday Night, Saturday Morning", "", "images/friday_night.png", "The specials", "0:00")
@@ -66,9 +66,9 @@ window.addEventListener('load', () => {
     create_track("Tennessee Whiskey", "", "images/tennessee.png", "Chris Stapleton", "0:00")
     create_track("White Wedding", "", "images/white_wedding.png", "Billy Idol", "0:00")
     create_track("You're wondering Now", "", "images/wondering_now.png", "The specials", "0:00")
-    create_track("Caress Me Down ", "aaa", "images/santeria.png", "Sublime", "0:00")
+    create_track("Caress Me Down ", "", "images/santeria.png", "Sublime", "0:00")
     create_track("Hymne à la bière ", "", "images/aucun_cadre.png", "Orloge Simard", "0:00")
-    create_track("Psycho Killer", "a", "images/psycho_killer.png", "Talking Heads", "0:00")
+    create_track("Psycho Killer", "", "images/psycho_killer.png", "Talking Heads", "0:00")
     create_track("I Will Survive", "", "images/survive.png", "CAKE", "0:00")
     // create_track("", "", "images/")
 
